@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useContext, useState } from "react";
 import { CartContext } from "@/context/CartContext";
 import { ShoppingCart, Eye, Star } from "lucide-react";
+import Image from 'next/image';
 
 export default function ProductCard({ product }) {
   const { addToCart } = useContext(CartContext);
@@ -61,7 +62,7 @@ export default function ProductCard({ product }) {
             isHovered ? "scale-110" : ""
           }`}
         >
-          <img
+          <Image
             src={product.image}
             alt={product.title}
             className="max-h-48 max-w-full object-contain"

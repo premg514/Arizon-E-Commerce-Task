@@ -4,6 +4,7 @@ import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { CartContext } from '@/context/CartContext';
 import { Star, ShoppingCart, ArrowLeft, ChevronRight, Truck, Shield, Clock } from 'lucide-react';
+import Image from 'next/image';
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -83,7 +84,8 @@ console.log(quantity)
     return (
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 text-center">
         <h2 className="text-2xl font-bold text-gray-800 mb-2">Product not found</h2>
-        <p className="text-gray-600 mb-6">Sorry, we couldn't find the product you're looking for.</p>
+        <p className="text-gray-600 mb-6">Sorry, we couldn&apos;t find the product you&apos;re looking for.</p>
+
         <Link 
           href="/" 
           className="inline-flex items-center px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
@@ -117,7 +119,7 @@ console.log(quantity)
           <div className="w-full max-w-md bg-white rounded-xl p-6 flex items-center justify-center">
             <div className="relative aspect-square w-full flex items-center justify-center bg-gray-50 rounded-lg overflow-hidden">
               {!imageLoaded && <div className="absolute inset-0 bg-gray-100 animate-pulse"></div>}
-              <img 
+              <Image
                 src={product.image} 
                 alt={product.title} 
                 className={`max-h-full max-w-full object-contain transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}

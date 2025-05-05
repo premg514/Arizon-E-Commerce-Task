@@ -62,7 +62,7 @@ export default function ProductCard({ product }) {
             isHovered ? "scale-110" : ""
           }`}
         >
-          <Image
+          <img
             src={product.image}
             alt={product.title}
             className="max-h-48 max-w-full object-contain"

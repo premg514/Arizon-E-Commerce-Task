@@ -37,7 +37,7 @@ export default function CartItem({ product }) {
       {/* Product Image and Details */}
       <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-3 sm:mb-0">
         <div className={`relative rounded-md overflow-hidden bg-gray-50 p-2 transition-all duration-300 ${isHovered ? 'scale-105' : ''}`}>
-          <Image
+          <img
             src={product.image} 
             alt={product.title}
             className="h-24 w-24 object-contain" 

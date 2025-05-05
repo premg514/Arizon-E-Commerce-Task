@@ -119,7 +119,7 @@ console.log(quantity)
           <div className="w-full max-w-md bg-white rounded-xl p-6 flex items-center justify-center">
             <div className="relative aspect-square w-full flex items-center justify-center bg-gray-50 rounded-lg overflow-hidden">
               {!imageLoaded && <div className="absolute inset-0 bg-gray-100 animate-pulse"></div>}
-              <Image
+              <img
                 src={product.image} 
                 alt={product.title} 
                 className={`max-h-full max-w-full object-contain transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
